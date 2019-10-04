@@ -46,6 +46,8 @@ const neo = () => {
 
     case "celsius":
       switch (fromConv.value) {
+
+        //celsius to kelvin
         case "kelvin":
           (function celToKel() {
             let f = n - 273.15;
@@ -53,6 +55,7 @@ const neo = () => {
           })();
           break;
 
+          //celsius to fahrenheit
         case "fahrenheit":
           (function fahToCel() {
             let a = n - 32;
