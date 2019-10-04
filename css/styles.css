@@ -1,0 +1,254 @@
+img {
+  width: 60px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 21px;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+header {
+  display: flex;
+  height: 10vh;
+  font-family: 'Be Vietnam', sans-serif;
+}
+.aligner {
+  background-image: linear-gradient(to top, #eaeaea, #fff, #eaeaea);
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+ul li {
+  height: 100%;
+  margin: 10px;
+  box-sizing: border-box;
+  color: #232323;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li a {
+  color: #232323;
+  text-transform: capitalize;
+  font-size: 17px;
+  text-decoration: none;
+}
+.logo {
+  color: #232323;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.flex-container {
+  width: 100%;
+  height: 90vh;
+  background: #1a1a1a;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.input {
+  width: 55%;
+  display: flex;
+}
+.input input {
+  font-family: 'Be Vietnam', sans-serif;
+  padding: 10px 5px;
+  border: none;
+  box-sizing: border-box;
+  width: calc(100% - 100px);
+  height: 2em;
+  font-size: 1.3em;
+  border-top-left-radius: 3px;
+}
+.input button {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+  background: #f84d98;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.input img {
+  width: 100px;
+  height: 2em;
+  filter: invert(100%);
+}
+.insert {
+  width: 55%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-side {
+  width: 200px;
+  height: 180px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  order: 1;
+}
+.left-side p {
+  border-radius: 2px;
+  width: 100%;
+  background: #04a681;
+  padding: 2px 0;
+  height: 2em;
+  color: #fff;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-side {
+  width: 200px;
+  height: 180px;
+  height: 100%;
+  order: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.convert-btn {
+  border-radius: 2px;
+  width: 100%;
+  background: #04a681;
+  border: none;
+  padding: 2px 0;
+  height: 2em;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+select {
+  border-radius: 2px;
+  outline: 0;
+  border: 0;
+  background: #f84d98;
+  background-image: none;
+  text-transform: capitalize;
+  flex: 1;
+  padding: 0 0.5em;
+  color: #fff;
+  cursor: pointer;
+}
+select option {
+  border: 5px solid #00f;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 5em;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 8.5em;
+  height: 2em;
+  line-height: 2em;
+}
+/* Arrow */
+.select::after {
+  border-radius: 2px;
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  color: #fff;
+  background: #f84d98;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #e60266;
+}
+.upValue {
+  border-radius: 2px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  filter: invert(100%);
+  cursor: pointer;
+  transition: 100ms ease-out;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.upValue:hover {
+  background: #f84d98;
+}
+.upValue img {
+  transform: rotate(45deg);
+}
+#convertedNumb {
+  border-radius: 2px;
+  font-family: 'Be Vietnam', sans-serif;
+  color: #e3e3e3;
+  text-shadow: 4px 5px 3px rgba(0,0,0,0.8);
+  width: 240px;
+  padding: 30px;
+  font-size: 55px;
+  background: #171717;
+  text-align: center;
+  transition: 200ms ease-in-out;
+  box-shadow: inset 0 1px 5px 2px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-part {
+  order: 3;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.invert {
+  border-radius: 2px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  filter: invert(100%);
+  cursor: pointer;
+  transition: 100ms ease-out;
+  padding: 10px;
+}
+.invert:hover {
+  background: #f84d98;
+}
+.img-in-btn {
+  margin-left: 10px;
+  width: 20px;
+  transform: rotate(180deg);
+  filter: invert(100%);
+}

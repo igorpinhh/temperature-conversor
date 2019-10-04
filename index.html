@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Be+Vietnam|Raleway&display=swap" 
+  rel="stylesheet"> 
+</head>
+<body>
+  <header>
+    <div class="aligner">
+      <a href="#" class="logo">igor pinheiro</a>
+      <nav>
+        <ul>
+          <li><a href="#">kilogram</a></li>
+          <li><a href="#">second</a></li>
+          <li><a href="#">ampere</a></li>
+          <li><a href="#">meter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="flex-container">
+    <div class="input">
+      <input type="text" id="numberTemp" placeholder="Ex 121&#176;">
+      <button id="convert"><img src="imgs/play.svg"></button>
+    </div>
+    <div class="insert">
+
+      <div class="left-side">
+        <p>from<img src="imgs/left-arrow.svg" class="img-in-btn"></p>
+        <p class="convert-btn">Convert to<img src="imgs/left-arrow.svg" class="img-in-btn"></p>
+      </div>
+
+      <div class="main-part">
+        <div class="buttons">
+          <button id="getValue" class="upValue"><img src="imgs/arrow.svg"></button>
+        </div>
+        <div id="convertedNumb">0</div>
+      </div>
+
+      <div class="right-side">
+        <div class="select">
+          <select id="from">
+            <option value="fahrenheit">fahrenheit</option>
+            <option value="celsius" selected>celsius</option>
+            <option value="kelvin">kelvin</option>
+          </select>
+        </div>
+
+        <button id="invert" class="invert"><img src="imgs/circle.svg"></button>
+
+        <div class="select">
+          <select id="unity">
+            <option value="fahrenheit" selected>fahrenheit</option>
+            <option value="celsius">celsius</option>
+            <option value="kelvin">kelvin</option>
+          </select>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
