@@ -1,15 +1,15 @@
-const btn             = document.getElementById("convert");
-const upVal           = document.getElementById("getValue");
-const input           = document.getElementById("numberTemp");
-const invertBtn       = document.getElementById("invert");
-const convertedNumb   = document.getElementById('convertedNumb');
-const toConv          = document.getElementById("unit");
-const fromConv        = document.getElementById("from");
-const afterDot        = 1;
-const errorMsg        = 'you cannot convert by the same base unit';
+const btn = document.getElementById("convert");
+const upVal = document.getElementById("getValue");
+const input = document.getElementById("numberTemp");
+const invertBtn = document.getElementById("invert");
+const convertedNumb = document.getElementById("convertedNumb");
+const toConv = document.getElementById("unit");
+const fromConv = document.getElementById("from");
+const afterDot = 1;
+const errorMsg = "you cannot convert by the same base unit";
 
-window.addEventListener('load', ()=>{
-  input.value = '0';
+window.addEventListener("load", () => {
+  input.value = "";
   input.focus();
 });
 
@@ -125,4 +125,11 @@ const invertOp = () => {
 
 invertBtn.addEventListener("click", () => {
   invertOp();
+});
+
+window.addEventListener("keypress", () => {
+  if (event.keyCode === 32) {
+    invertOp();
+    input.focus();
+  }
 });

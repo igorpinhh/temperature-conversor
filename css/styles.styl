@@ -12,15 +12,13 @@ header
   font-family: 'Be Vietnam', sans-serif;
 
 .aligner
-  background-image linear-gradient(to top, #eaeaea, #ffffff, #eaeaea)
+  background #efefef
   width 100%
   height 100%
   padding 0 15px
   box-sizing border-box
   box-shadow 0 0 10px 10px rgba(#000, 0.4)
-  display flex
-  justify-content space-between
-  align-items center
+  flex-between()
  
 ul
   height 100%
@@ -28,22 +26,20 @@ ul
   display flex
   flex-direction row
 
-  li
-    height 100%
-    margin 10px
-    box-sizing border-box
+li
+  height 100%
+  margin 10px
+  box-sizing border-box
+  color link-color
+  text-transform capitalize
+  font-size 1.2em
+  text-decoration none
+  flex-center()
+  a 
     color link-color
     text-transform capitalize
-    font-size 1.2em
+    font-size 17px
     text-decoration none
-    display flex
-    justify-content center
-    align-items center
-    a 
-      color link-color
-      text-transform capitalize
-      font-size 17px
-      text-decoration none
 
 .logo
   color link-color
@@ -52,13 +48,11 @@ ul
   text-decoration none 
 
 .flex-container 
+  flex-center()
   width 100%
   height 90vh
   background #1a1a1a
   margin 0 auto
-  display flex
-  justify-content center
-  align-items center
   flex-direction column
 
 .input
@@ -91,16 +85,12 @@ ul
 .insert
   width 55%
   height 40%
-  display flex
-  justify-content space-between
-  align-items center
+  flex-between()
 
 .left-side
   side-size()
   height 100%
-  display flex
-  justify-content space-between
-  align-items center
+  flex-between()
   flex-direction column
   order 1
   p 
@@ -111,32 +101,75 @@ ul
     height 2em
     color #fff
     text-transform capitalize
-    display flex
-    justify-content center
-    align-items center
+    flex-center()
+    arrow-inside()
+
+.main-part
+  order 3
+  height 100%
+  flex-between()
+  flex-direction column
+
+  button
+    button()
+    padding 10px
+    box-sizing border-box
+    img
+      transform rotate(45deg)
+
+  div
+    border-radius()
+    font-family 'Be Vietnam', sans-serif
+    color #e3e3e3
+    text-shadow 4px 5px 3px rgba(#000, 0.8)
+    width 240px
+    padding 30px
+    font-size 55px
+    background #171717
+    text-align center
+    transition 200ms ease-in-out
+    box-shadow inset 0 1px 5px 2px rgba(#000, 0.3)
+    flex-center()
 
 .right-side
   side-size()
   height 100%
   order 2
-  display flex
-  justify-content space-between
-  align-items center
+  flex-between()
   flex-direction column
 
-.convert-btn
-  // button()
-  border-radius()
-  width 100%
-  background secondary-color
-  border none
-  padding 2px 0
-  height 2em
-  color #fff
-  cursor pointer
+  button
+    border-radius()
+    background secondary-color
+    border none
+    padding 15px 
+    color #fff
+    cursor pointer
+    flex-center()
+    button()
+
+.select
+  position relative
   display flex
-  justify-content center
-  align-items center
+  width 8.5em
+  height 2em
+  line-height 2em
+
+  //arrow
+  &::after 
+    border-radius()
+    content '\25BC'
+    position absolute
+    top 0
+    right 0
+    padding 0 1em
+    color white
+    background #f84d98
+    cursor pointer
+    pointer-events none
+    -webkit-transition .25s all ease
+    -o-transition .25s all ease
+    transition .25s all ease
 
 select
   border-radius()
@@ -149,78 +182,7 @@ select
   padding 0 .5em
   color #fff
   cursor pointer
-  option
-    border 5px solid blue
-    padding 5px 10px
-    box-sizing border-box
-    color #fff
-    margin 5em
 
-// Custom Select
-.select
-  position relative
-  display flex
-  width 8.5em
-  height 2em
-  line-height 2em
-
-/* Arrow */
-.select::after 
-  border-radius()
-  content '\25BC'
-  position absolute
-  top 0
-  right 0
-  padding 0 1em
-  color white
-  background #f84d98
-  cursor pointer
-  pointer-events none
-  -webkit-transition .25s all ease
-  -o-transition .25s all ease
-  transition .25s all ease
-
-/* Transition */
+//transition
 .select:hover::after
   color #e60266
-
-.upValue
-  button()
-  padding 10px
-  box-sizing border-box
-  img 
-    transform rotate(45deg)
-
-#convertedNumb
-  border-radius()
-  font-family 'Be Vietnam', sans-serif
-  color #e3e3e3
-  text-shadow 4px 5px 3px rgba(#000, 0.8)
-  width 240px
-  padding 30px
-  font-size 55px
-  background #171717
-  text-align center
-  transition 200ms ease-in-out
-  box-shadow inset 0 1px 5px 2px rgba(#000, 0.3)
-  display flex
-  justify-content center
-  align-items center
-
-.main-part
-  order 3
-  height 100%
-  display flex
-  justify-content space-between
-  align-items center
-  flex-direction column
-
-.invert
-  button()
-  padding 10px
-
-.img-in-btn
-  margin-left 10px
-  width 20px
-  transform rotate(180deg)
-  filter invert(100%)
