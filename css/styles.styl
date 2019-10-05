@@ -1,11 +1,7 @@
 // stylus -w styles.styl -o styles.css
 @import 'helpers/mixins'
 @import 'helpers/variables'
-
-*
-  padding 0
-  margin 0
-  font-size 21px
+@import 'helpers/normalize'
 
 body 
   font-family: 'Raleway', sans-serif;
@@ -108,7 +104,7 @@ ul
   flex-direction column
   order 1
   p 
-    border-radius(n)
+    border-radius()
     width 100%
     background secondary-color
     padding 2px 0
@@ -130,7 +126,7 @@ ul
 
 .convert-btn
   // button()
-  border-radius(n)
+  border-radius()
   width 100%
   background secondary-color
   border none
@@ -143,7 +139,7 @@ ul
   align-items center
 
 select
-  border-radius(n)
+  border-radius()
   outline 0
   border 0
   background main-color
@@ -170,7 +166,7 @@ select
 
 /* Arrow */
 .select::after 
-  border-radius(n)
+  border-radius()
   content '\25BC'
   position absolute
   top 0
@@ -196,7 +192,7 @@ select
     transform rotate(45deg)
 
 #convertedNumb
-  border-radius(n)
+  border-radius()
   font-family 'Be Vietnam', sans-serif
   color #e3e3e3
   text-shadow 4px 5px 3px rgba(#000, 0.8)
