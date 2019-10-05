@@ -1,20 +1,20 @@
-const btn = document.querySelector("#convert");
-const upVal = document.getElementById("getValue");
-const postNumber = 1;
-const errorMsg = "you cannot convert by the same base unit";
-const input = document.getElementById("numberTemp");
-const invertBtn = document.getElementById("invert");
+const btn             = document.getElementById("convert");
+const upVal           = document.getElementById("getValue");
+const input           = document.getElementById("numberTemp");
+const invertBtn       = document.getElementById("invert");
+const convertedNumb   = document.getElementById('convertedNumb');
+const toConv          = document.getElementById("unit");
+const fromConv        = document.getElementById("from");
+const afterDot        = 1;
+const errorMsg        = 'you cannot convert by the same base unit';
 
-window.onload = function() {
+window.addEventListener('load', ()=>{
   input.value = '0';
   input.focus();
-};
+});
 
 const neo = () => {
-  let n = parseInt(document.querySelector("#numberTemp").value, 10);
-  const toConv = document.getElementById("unity");
-  const i = document.querySelector("#convertedNumb");
-  const fromConv = document.getElementById("from");
+  let n = parseInt(input.value, 10);
 
   switch (toConv.value) {
     case "fahrenheit":
@@ -24,16 +24,17 @@ const neo = () => {
           (function farToCel() {
             console.log("from celsius to fahrenheit");
             let f = (n * 9) / 5 + 32;
-            i.innerHTML = f.toFixed(postNumber);
+            convertedNumb.innerHTML = f.toFixed(afterDot);
           })();
           break;
 
         //kelvin to fahrenheit
         case "kelvin":
           (function farToKel() {
+            console.log("from kelvin to fahrenheit");
             let g = n + 459.67;
             let f = (g * 5) / 9;
-            i.innerHTML = f.toFixed(postNumber);
+            convertedNumb.innerHTML = f.toFixed(afterDot);
           })();
           break;
 
@@ -46,22 +47,19 @@ const neo = () => {
 
     case "celsius":
       switch (fromConv.value) {
-
-        //celsius to kelvin
         case "kelvin":
           (function celToKel() {
             let f = n - 273.15;
-            i.innerHTML = f.toFixed(postNumber);
+            convertedNumb.innerHTML = f.toFixed(afterDot);
           })();
           break;
 
-          //celsius to fahrenheit
         case "fahrenheit":
           (function fahToCel() {
             let a = n - 32;
             let f = (a * 5) / 9;
             console.log("from fahrenheit to celsius");
-            i.innerHTML = f.toFixed(postNumber);
+            convertedNumb.innerHTML = f.toFixed(afterDot);
           })();
           break;
 
@@ -78,7 +76,7 @@ const neo = () => {
           (function kelToFah() {
             let k = n + 459.67;
             k = (k * 5) / 9;
-            i.innerHTML = k.toFixed(postNumber);
+            convertedNumb.innerHTML = k.toFixed(afterDot);
           })();
           break;
 
@@ -90,7 +88,7 @@ const neo = () => {
         case "celsius":
           (function kelToCel() {
             let k = n + 273.15;
-            i.innerHTML = k.toFixed(postNumber);
+            convertedNumb.innerHTML = k.toFixed(afterDot);
           })();
           break;
       }
@@ -112,14 +110,13 @@ input.addEventListener("keypress", () => {
 
 upVal.addEventListener("click", () => {
   const n = document.getElementById("convertedNumb");
-  const destin = document.getElementById("numberTemp");
-  destin.value = n.innerHTML;
+  input.value = n.innerHTML;
   document.getElementById("convertedNumb").innerHTML = "0";
 });
 
 const invertOp = () => {
   let opIn = document.getElementById("from");
-  let opTo = document.getElementById("unity");
+  let opTo = document.getElementById("unit");
 
   let temp = opIn.value;
   opIn.value = opTo.value;
