@@ -160,7 +160,7 @@ li a {
 
 @media (min-width: 1200px) {
   .input {
-    width: 60%;
+    width: 42%;
   }
   .input input {
     width: 90%;
@@ -508,7 +508,6 @@ li a {
 
 select {
   border-radius: 2px;
-  font-size: 16px;
   outline: 0;
   border: 0;
   background: #f84d98;
@@ -518,4 +517,10 @@ select {
   padding: 0 .5em;
   color: #fff;
   cursor: pointer;
+}
+
+@media (max-width: 555px) {
+  select {
+    font-size: 16px;
+  }
 }
