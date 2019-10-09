@@ -151,8 +151,8 @@ li{
   flex-flow: row wrap;
 
   @include sr {
-    width: 100%;
-    height: 40vh;
+    width: 90%;
+    height: 55vh;
   }
 
   @include sm {
@@ -189,6 +189,7 @@ li{
 .left-side{
   @include flex-between;
   flex-direction: column;
+  margin: 10px 0;
 
   p {
     border-radius: $border;
@@ -270,7 +271,7 @@ li{
 
 .main-part {
   width: 100%;
-  height: 50%;
+  height: 60%;
   @include flex-between;
   flex-direction: column;
   button{
@@ -285,7 +286,7 @@ li{
     color: #e3e3e3;
     text-shadow: 4px 5px 3px rgba(#000, 0.8);
     width: 100%;
-    height: 80%;
+    height: 100%;
     font-size: 55px;
     background: #171717;
     text-align: center;
@@ -293,6 +294,17 @@ li{
     box-shadow: inset 0 1px 5px 2px rgba(#000, 0.3);
     @include flex-center;
   }
+
+  @include sr {
+    button {
+      &:hover {
+        background: transparent;
+      }
+      img {
+      width: 30px;
+    }
+  }
+}
 }
 
 .right-side{
@@ -393,7 +405,7 @@ li{
   }
 
   @include sr {
-    width: 100%;
+    width: 14em;
     font-size: 10px;
     height: 4em;
     line-height: 4em;
@@ -402,6 +414,7 @@ li{
 
 select{
   border-radius: $border;
+  font-size: 16px;
   outline: 0;
   border: 0;
   background: $main-color;

@@ -178,8 +178,8 @@ li a {
 
 @media (max-width: 555px) {
   .insert {
-    width: 100%;
-    height: 40vh;
+    width: 90%;
+    height: 55vh;
   }
 }
 
@@ -232,6 +232,7 @@ li a {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  margin: 10px 0;
 }
 
 .left-side p {
@@ -320,7 +321,7 @@ li a {
 
 .main-part {
   width: 100%;
-  height: 50%;
+  height: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -353,7 +354,7 @@ li a {
   color: #e3e3e3;
   text-shadow: 4px 5px 3px rgba(0, 0, 0, 0.8);
   width: 100%;
-  height: 80%;
+  height: 100%;
   font-size: 55px;
   background: #171717;
   text-align: center;
@@ -362,6 +363,15 @@ li a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 555px) {
+  .main-part button:hover {
+    background: transparent;
+  }
+  .main-part button img {
+    width: 30px;
+  }
 }
 
 .right-side {
@@ -489,7 +499,7 @@ li a {
 
 @media (max-width: 555px) {
   .select {
-    width: 100%;
+    width: 14em;
     font-size: 10px;
     height: 4em;
     line-height: 4em;
@@ -498,6 +508,7 @@ li a {
 
 select {
   border-radius: 2px;
+  font-size: 16px;
   outline: 0;
   border: 0;
   background: #f84d98;
