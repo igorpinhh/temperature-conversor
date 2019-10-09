@@ -1,0 +1,18 @@
+$main-color: #f84d98;
+$secondary-color: #04a681;
+$link-color: #232323;
+$border: 2px;
+
+// screen = @media screen and (min-width: n)
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;

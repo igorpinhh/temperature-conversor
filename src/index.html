@@ -26,42 +26,42 @@
 
   <div class="flex-container">
     <div class="input">
-      <input type="text" id="numberTemp" placeholder="Ex 121&#176;">
+      <input type="number" id="numberTemp" placeholder="Ex 121&#176;">
       <button id="convert"><img src="imgs/play.svg"></button>
     </div>
     <div class="insert">
 
-      <div class="left-side">
-        <p>from<img src="imgs/left-arrow.svg"></p>
-        <p class="convert-btn">Convert to<img src="imgs/left-arrow.svg"></p>
+      <div class="side-part">
+        <div class="left-side">
+          <p>from<img src="imgs/left-arrow.svg"></p>
+          <p class="convert-btn">Convert to<img src="imgs/left-arrow.svg"></p>
+        </div>
+      
+        <div class="right-side">
+          <div class="select">
+            <select id="from">
+              <option value="fahrenheit">fahrenheit</option>
+              <option value="celsius" selected>celsius</option>
+              <option value="kelvin">kelvin</option>
+            </select>
+          </div>
+  
+          <button id="invert"><img src="imgs/circle.svg"></button>
+  
+          <div class="select">
+            <select id="unit">
+              <option value="fahrenheit" selected>fahrenheit</option>
+              <option value="celsius">celsius</option>
+              <option value="kelvin">kelvin</option>
+            </select>
+          </div>
+        </div>
       </div>
 
       <div class="main-part">
-        <button id="getValue"><img src="imgs/arrow.svg"></button>
+        <button id="getValue"><img src="imgs/copy.svg"></button>
         <div id="convertedNumb">0</div>
       </div>
-
-      <div class="right-side">
-        <div class="select">
-          <select id="from">
-            <option value="fahrenheit">fahrenheit</option>
-            <option value="celsius" selected>celsius</option>
-            <option value="kelvin">kelvin</option>
-          </select>
-        </div>
-
-        <button id="invert"><img src="imgs/circle.svg"></button>
-
-        <div class="select">
-          <select id="unit">
-            <option value="fahrenheit" selected>fahrenheit</option>
-            <option value="celsius">celsius</option>
-            <option value="kelvin">kelvin</option>
-          </select>
-        </div>
-
-      </div>
-
 
     </div>
 

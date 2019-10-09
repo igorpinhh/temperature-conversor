@@ -1,0 +1,67 @@
+@mixin side-size{
+  width: 200px;
+  height: 180px;
+}
+
+@mixin button{
+  border-radius: $border;
+  border: none ;
+  background: transparent;
+  color: white;
+  filter: invert(100%);
+  cursor: pointer;
+  transition: 100ms ease-out;
+  &:hover{
+    background: $main-color;
+  }
+  img{
+    width: 60px;}
+}
+
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin arrow-inside{
+  img {
+    margin-left: 10px;
+    width: 20px;
+    transform: rotate(180deg);
+    filter: invert(100%);
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
