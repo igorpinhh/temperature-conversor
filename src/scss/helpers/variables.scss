@@ -3,16 +3,17 @@ $secondary-color: #04a681;
 $link-color: #232323;
 $border: 2px;
 
-// screen = @media screen and (min-width: n)
+//smaller tables and smartphones
+$screen-smr-min: 555px;
 
-// Small tablets and large smartphones (landscape view)
+// small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
 
-// Small tablets (portrait view)
+// small tablets (portrait view)
 $screen-md-min: 768px;
 
-// Tablets and small desktops
+// tablets and small desktops
 $screen-lg-min: 992px;
 
-// Large tablets and desktops
+// large tablets and desktops
 $screen-xl-min: 1200px;

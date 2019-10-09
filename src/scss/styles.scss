@@ -11,6 +11,12 @@ header{
   display: flex;
   height: 10vh;
   font-family: 'Be Vietnam', sans-serif;
+
+  @include sr {
+    nav {
+      display: none;
+    }
+  }
 }
 
 .aligner{
@@ -96,6 +102,16 @@ li{
     filter: invert(100%);
   }
 
+  @include sr{
+    width: 90%;
+    input {
+      width: 90%;
+    }
+    button {
+      
+    }
+  }
+
   @include sm{
     width: 80%;
     input {
@@ -133,6 +149,11 @@ li{
   height: 40vh;
   @include flex-between;
   flex-flow: row wrap;
+
+  @include sr {
+    width: 100%;
+    height: 40vh;
+  }
 
   @include sm {
     width: 80%;
@@ -180,6 +201,24 @@ li{
     @include flex-center;
     @include arrow-inside;
   }
+
+  @include sr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    p {
+      width: 5em;
+      font-size: 13px;
+      padding: 10px;
+      // box-sizing: border-box;
+
+      img {
+        display: none;
+      }
+    }
+  }
+
   @include sm{
     width: 100%;
     display: flex;
@@ -269,14 +308,32 @@ li{
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
+  
     @include flex-center;
     @include button;
+  
     &:hover {
       background: transparent;
     }
+
     img {
       width: 55px;
     }
+  }
+
+  @include sr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    button {
+      width: 35px;
+      
+      img {
+        width: 35px;
+      }
+    }    
   }
 
   @include sm {
@@ -331,6 +388,16 @@ li{
     -o-transition: .25s all ease;
     transition: .25s all ease;
   }
+  &:hover::after{
+    color: #e60266;
+  }
+
+  @include sr {
+    width: 100%;
+    font-size: 10px;
+    height: 4em;
+    line-height: 4em;
+  }
 }
 
 select{
@@ -344,9 +411,4 @@ select{
   padding: 0 .5em;
   color: #fff;
   cursor: pointer;
-}
-
-//transition
-.select:hover::after{
-  color: #e60266;
 }

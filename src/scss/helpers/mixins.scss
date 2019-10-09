@@ -39,8 +39,16 @@
   }
 }
 
+// smaller devices
+@mixin sr {
+  @media (max-width: #{$screen-smr-min}) {
+    @content;
+  }
+}
+
+// small devices
 @mixin sm {
-  @media (max-width: #{$screen-md-min}) {
+  @media (min-width: #{$screen-smr-min}) and (max-width: #{$screen-md-min}) {
     @content;
   }
 }
