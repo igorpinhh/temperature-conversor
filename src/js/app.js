@@ -8,9 +8,9 @@ const fromConv = document.getElementById("from");
 const afterDot = 1;
 const errorMsg = "you cannot convert by the same base unit";
 
+
 window.addEventListener("load", () => {
   input.value = "";
-  input.focus();
 });
 
 const neo = () => {
@@ -98,13 +98,11 @@ const neo = () => {
 
 btn.addEventListener("click", () => {
   neo();
-  input.focus();
 });
 
 input.addEventListener("keypress", () => {
   if (event.keyCode === 13) {
     neo();
-    input.focus();
   }
 });
 
@@ -130,6 +128,5 @@ invertBtn.addEventListener("click", () => {
 window.addEventListener("keypress", () => {
   if (event.keyCode === 32) {
     invertOp();
-    input.focus();
   }
 });
