@@ -1,71 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Temperature Conversor</title>
-  <link rel="stylesheet" href="src/css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Be+Vietnam|Raleway&display=swap" 
-  rel="stylesheet"> 
-</head>
-<body>
-  <header>
-    <div class="aligner">
-      <a href="#" class="logo">igor pinheiro</a>
-      <nav>
-        <ul>
-          <li><a href="#">kilogram</a></li>
-          <li><a href="#">second</a></li>
-          <li><a href="#">ampere</a></li>
-          <li><a href="#">meter</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Temperature Conversor</title>
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Be+Vietnam|Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="aligner">
+        <a href="#" class="logo">igor pinheiro</a>
+        <nav>
+          <ul>
+            <li><a href="#">kilogram</a></li>
+            <li><a href="#">second</a></li>
+            <li><a href="#">ampere</a></li>
+            <li><a href="#">meter</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <div class="flex-container">
-    <div class="input">
-      <input type="number" id="numberTemp" placeholder="Ex 121&#176;">
-      <button id="convert"><img src="src/imgs/play.svg"></button>
-    </div>
-    <div class="insert">
-
-      <div class="side-part">
-        <div class="left-side">
-          <p>from<img src="src/imgs/left-arrow.svg"></p>
-          <p class="convert-btn">To<img src="src/imgs/left-arrow.svg"></p>
-        </div>
-      
-        <div class="right-side">
-          <div class="select">
-            <select id="from">
-              <option value="fahrenheit">fahrenheit</option>
-              <option value="celsius" selected>celsius</option>
-              <option value="kelvin">kelvin</option>
-            </select>
+    <div class="flex-container">
+      <div class="input">
+        <input type="number" id="numberTemp" placeholder="Ex 121&#176;" />
+        <button id="convert"><img src="src/imgs/play.svg" /></button>
+      </div>
+      <div class="insert">
+        <div class="side-part">
+          <div class="left-side">
+            <p>from<img src="src/imgs/left-arrow.svg" /></p>
+            <p class="convert-btn">To<img src="src/imgs/left-arrow.svg" /></p>
           </div>
 
-          <button id="invert"><img src="src/imgs/circle.svg"></button>
+          <div class="right-side">
+            <div class="select">
+              <select name="slct" id="from">
+                <option value="fahrenheit">fahrenheit</option>
+                <option value="celsius" selected>celsius</option>
+                <option value="kelvin">kelvin</option>
+              </select>
+            </div>
 
-          <div class="select">
-            <select id="unit">
-              <option value="fahrenheit" selected>fahrenheit</option>
-              <option value="celsius">celsius</option>
-              <option value="kelvin">kelvin</option>
-            </select>
+            <button id="invert"><img src="src/imgs/circle.svg" /></button>
+
+            <div class="select">
+              <select name="slct" id="unit">
+                <option value="fahrenheit" selected>fahrenheit</option>
+                <option value="celsius">celsius</option>
+                <option value="kelvin">kelvin</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="main-part">
-        <button id="getValue"><img src="src/imgs/copy.svg" id="a"></button>
-        <div id="convertedNumb">0</div>
+        <div class="main-part">
+          <button id="getValue"><img src="src/imgs/copy.svg" id="a" /></button>
+          <div id="convertedNumb">0</div>
+        </div>
       </div>
-
     </div>
-
-  </div>
-  <script src="src/js/app.js"></script>
-</body>
+    <script src="src/js/app.js"></script>
+  </body>
 </html>

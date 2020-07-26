@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js npx nodejs-hot-reload entry=./src/js/app.js outDir=./build",
+    "gulp": "gulp --watch",
+    "eslint": "eslint src/js/app.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,13 @@
   },
   "homepage": "https://github.com/igorpinhh/temperature-conversor#readme",
   "devDependencies": {
+    "body-parser": "^1.19.0",
     "eslint": "^6.5.1",
+    "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.14.1",
+    "nodejs-hot-reload": "^0.1.2",
+    "prettier": "2.0.5"
   }
 }

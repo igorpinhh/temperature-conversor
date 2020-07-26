@@ -6,37 +6,38 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-header{
+header {
   width: 100%;
   display: flex;
   height: 10vh;
   font-family: 'Be Vietnam', sans-serif;
 
   @include sr {
+    height: 7vh;
     nav {
       display: none;
     }
   }
 }
 
-.aligner{
+.aligner {
   background: #efefef;
   width: 100%;
   height: 100%;
   padding: 0 15px;
   box-sizing: border-box;
-  box-shadow: 0 0 10px 10px rgba(#000, 0.4);
+  box-shadow: 0 0 10px 10px rgba(#000, 0.8);
   @include flex-between;
 }
 
-ul{
+ul {
   height: 100%;
   list-style: none;
   display: flex;
   flex-direction: row;
 }
 
-li{
+li {
   height: 100%;
   margin: 10px;
   box-sizing: border-box;
@@ -53,11 +54,15 @@ li{
   }
 }
 
-.logo{
+.logo {
   color: $link-color;
   text-transform: capitalize;
   font-size: 1.2em;
   text-decoration: none;
+
+  @include sr {
+    font-size: 14px;
+  }
 }
 
 .flex-container {
@@ -65,8 +70,12 @@ li{
   width: 100%;
   height: 90vh;
   background: #1a1a1a;
-  margin: 0 auto;
+  //   margin: 0 auto;
   flex-direction: column;
+
+  @include sr {
+    height: 93vh;
+  }
 }
 
 .input {
@@ -84,7 +93,7 @@ li{
     border-top-left-radius: 3px;
   }
 
-  button{
+  button {
     width: 100px;
     border: none;
     background: none;
@@ -101,35 +110,35 @@ li{
     filter: invert(100%);
   }
 
-  @include sr{
+  @include sr {
     width: 90%;
     input {
       width: 90%;
     }
   }
 
-  @include sm{
+  @include sm {
     width: 80%;
     input {
       width: 90%;
     }
   }
 
-  @include md{
+  @include md {
     width: 80%;
     input {
       width: 90%;
     }
   }
 
-  @include lg{
+  @include lg {
     width: 60%;
     input {
       width: 90%;
     }
   }
 
-  @include xl{
+  @include xl {
     width: 42%;
     input {
       width: 90%;
@@ -137,7 +146,7 @@ li{
   }
 }
 
-.insert{
+.insert {
   width: 55%;
   height: 40vh;
   @include flex-between;
@@ -179,19 +188,17 @@ li{
   flex-direction: column;
 }
 
-.left-side{
+.left-side {
   @include flex-between;
   flex-direction: column;
   margin: 10px 0;
 
   p {
+    cursor: pointer;
     border-radius: $border;
-    width: 7em;
+    @include btn-size;
     background: $secondary-color;
-    padding: 15px;
-    // height: 2em;
     color: #fff;
-    text-transform: capitalize;
     @include flex-center;
     @include arrow-inside;
   }
@@ -202,25 +209,27 @@ li{
     justify-content: space-between;
     flex-direction: row;
     p {
-      width: 5em;
-      font-size: 13px;
-      padding: 10px;
+      font-size: 16px;
+      padding: 5px 2px;
+      @include btn-size;
+      height: 26px;
       // box-sizing: border-box;
-
+      //   @include btn-size;
       img {
         display: none;
       }
     }
   }
 
-  @include sm{
+  @include sm {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     p {
+      @include btn-size;
       img {
-        transform: rotate(-90deg)
+        transform: rotate(-90deg);
       }
     }
   }
@@ -231,20 +240,22 @@ li{
     justify-content: space-between;
     flex-direction: row;
     p {
+      @include btn-size;
+
       img {
-        transform: rotate(-90deg)
+        transform: rotate(-90deg);
       }
     }
   }
 
   @include lg {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     p {
       img {
-        transform: rotate(-90deg)
+        transform: rotate(-90deg);
       }
     }
   }
@@ -256,7 +267,7 @@ li{
     flex-direction: row;
     p {
       img {
-        transform: rotate(-90deg)
+        transform: rotate(-90deg);
       }
     }
   }
@@ -267,13 +278,13 @@ li{
   height: 60%;
   @include flex-between;
   flex-direction: column;
-  button{
+  button {
     @include button;
     padding: 10px;
     box-sizing: border-box;
   }
 
-  div{
+  div {
     border-radius: $border;
     font-family: 'Be Vietnam', sans-serif;
     color: #e3e3e3;
@@ -294,29 +305,25 @@ li{
         background: transparent;
       }
       img {
-      width: 30px;
+        width: 30px;
+      }
     }
   }
 }
-}
 
-.right-side{
-  height: 100%;
+.right-side {
+  width: 100%;
+  //   height: 100%;
   @include flex-between;
   flex-direction: column;
 
-  button{
+  button {
     border-radius: $border;
-    background: $secondary-color;
-    border: none;
-    padding: 5px;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-  
-    @include flex-center;
+    // background: $secondary-color;
+
+    // @include flex-center;
     @include button;
-  
+
     &:hover {
       background: transparent;
     }
@@ -334,11 +341,11 @@ li{
 
     button {
       width: 35px;
-      
+
       img {
         width: 35px;
       }
-    }    
+    }
   }
 
   @include sm {
@@ -356,7 +363,7 @@ li{
   }
 
   @include lg {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -370,54 +377,123 @@ li{
   }
 }
 
-.select{
-  position: relative;
-  display: flex;
-  width: 8.5em;
-  height: 2em;
-  line-height: 2em;
+// .select {
+//   //   width: 100%;
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   width: 8.5em;
+//   height: 2em;
+//   line-height: 2em;
+//   //   border: 1px solid red;
 
-  //arrow
-  &::after {
-    border-radius: $border;
-    content: '\25BC';
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 1em;
-    color: white;
-    background: #f84d98;
-    cursor: pointer;
-    pointer-events: none;
-    -webkit-transition: .25s all ease;
-    -o-transition: .25s all ease;
-    transition: .25s all ease;
-  }
-  &:hover::after{
-    color: #e60266;
-  }
+//   //arrow
+//   &::after {
+//     border-radius: $border;
+//     content: '\25BC';
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     padding: 0 1rem;
+//     color: white;
+//     background: #f84d98;
+//     cursor: pointer;
+//     // pointer-events: none;
+//     -webkit-transition: 0.25s all ease;
+//     -o-transition: 0.25s all ease;
+//     transition: 0.25s all ease;
+//   }
+//   &:hover::after {
+//     color: #e60266;
+//   }
 
-  @include sr {
-    width: 14em;
-    font-size: 10px;
-    height: 4em;
-    line-height: 4em;
-  }
-}
+//   @include sr {
+//     width: 6.5em;
+//     // font-size: 10px;
+//     // height: 4em;
+//     // line-height: 4em;
 
-select{
-  border-radius: $border;
+//     option {
+//       font-size: 14px;
+//     }
+
+//     &::after {
+//       content: unset;
+//     }
+//   }
+// }
+
+// select {
+//   //   border-radius: $border;
+//   outline: 0;
+//   border: 0;
+//   background: $main-color;
+//   background-image: none;
+//   text-transform: capitalize;
+//   flex: 1;
+//   padding: 0 1px;
+//   color: #fff;
+//   cursor: pointer;
+
+//   @include sr {
+//     font-size: 16px;
+//   }
+// }
+
+/* Reset Select */
+select {
+  appearance: none;
   outline: 0;
+  box-shadow: none;
   border: 0;
   background: $main-color;
   background-image: none;
-  text-transform: capitalize;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  @include btn-size;
+  padding: 0;
+  height: 2em;
+  line-height: 2;
+  background: $main-color;
+  overflow: hidden;
+  border-radius: 2px;
+  //   padding: 2px;
+
+  &::after {
+    content: '\25BC';
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 5px;
+    background-color: darken($main-color, 5);
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: 0.25s all ease;
+    -o-transition: 0.25s all ease;
+    transition: 0.25s all ease;
+  }
+}
+
+select {
+  //   text-align: center;
+  @include btn-size;
   flex: 1;
-  padding: 0 .5em;
+  padding: 0 6px;
   color: #fff;
   cursor: pointer;
+  text-transform: capitalize;
+  font-size: 16px;
 
-  @include sr {
-    font-size: 16px;
+  option {
+    font-size: 13px;
   }
 }

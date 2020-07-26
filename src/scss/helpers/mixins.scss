@@ -1,36 +1,44 @@
-@mixin side-size{
+@mixin side-size {
   width: 200px;
   height: 180px;
 }
 
-@mixin button{
+@mixin button {
   border-radius: $border;
-  border: none ;
+  border: none;
   background: transparent;
   color: white;
   filter: invert(100%);
   cursor: pointer;
   transition: 100ms ease-out;
-  &:hover{
+  &:hover {
     background: $main-color;
   }
-  img{
-    width: 60px;}
+  img {
+    width: 60px;
+  }
 }
 
-@mixin flex-center{
+@mixin btn-size {
+  width: 120px;
+  padding: 8px 0;
+  border-radius: 2px;
+  text-transform: capitalize;
+}
+
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin flex-between{
+@mixin flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-@mixin arrow-inside{
+@mixin arrow-inside {
   img {
     margin-left: 10px;
     width: 20px;
@@ -42,6 +50,7 @@
 // smaller devices
 @mixin sr {
   @media (max-width: #{$screen-smr-min}) {
+    // border: 1px solid red;
     @content;
   }
 }
@@ -49,6 +58,7 @@
 // small devices
 @mixin sm {
   @media (min-width: #{$screen-smr-min}) and (max-width: #{$screen-md-min}) {
+    // border: 1px solid orangered;
     @content;
   }
 }
@@ -56,6 +66,7 @@
 // Medium devices
 @mixin md {
   @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-min}) {
+    // border: 1px solid greenyellow;
     @content;
   }
 }
@@ -63,6 +74,7 @@
 // Large devices
 @mixin lg {
   @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-xl-min}) {
+    // border: 1px solid royalblue;
     @content;
   }
 }
